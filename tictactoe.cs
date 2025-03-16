@@ -65,6 +65,31 @@ class Program
 
     static void Main()
     {
-        
+        Draw();
+        while (true)
+        {
+            n++;
+            Input();
+            Draw();
+            if (Win() == 'X')
+            {
+                Console.WriteLine("X wins!!!");
+                break;
+            }
+            else if (Win() == 'O')
+            {
+                Console.WriteLine("O wins!!!");
+                break;
+            }
+            else if (n == 9)
+            {
+                Console.WriteLine("Draw :(");
+                break;
+            }
+            TogglePlayer();
+        }
+        Console.WriteLine("Press any key to exit...");
+        Console.ReadKey();
+    }
     }
 }
